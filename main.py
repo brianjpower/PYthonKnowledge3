@@ -4,7 +4,7 @@ from pandas import DataFrame, Series
 from sqlalchemy.dialects.mssql.information_schema import columns
 from wbdata.client import DataFrame
 
-"""
+
 #Read in prostate and heart data
 
 prostate = pd.read_csv('https://hastie.su.domains/ElemStatLearn/datasets/prostate.data',sep='\t')
@@ -347,7 +347,7 @@ plt.show()
 MSE_rf = np.mean(pow((rf_test_pred- Y_test),2))
 print(MSE_rf)
 
-"""
+
 #Classification
 
 #Read in the South Africa dataset again and split into training and test datasets
@@ -411,7 +411,7 @@ print(rf_clf_cross)
 
 rf_clf_misclas = (rf_clf_cross.iloc[0,1]+rf_clf_cross.iloc[1,0])/np.sum(rf_clf_cross.values)*100
 print(rf_clf_misclas)
-"""
+
 from sklearn import datasets
 iris = datasets.load_iris()
 
@@ -455,7 +455,7 @@ roc_rf = roc_curve(y_test, rf_test_prob)
 rf_auc = auc(roc_rf[0],roc_rf[1])
 roc_svm = roc_curve(y_test, svm_test_prob)
 svm_auc = auc(roc_svm[0],roc_svm[1])
-"""
+
 
 #Additional exercises
 from sklearn import datasets
